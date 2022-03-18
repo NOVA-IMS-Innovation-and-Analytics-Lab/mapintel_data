@@ -11,9 +11,10 @@ from io import BytesIO
 
 import boto3
 import newsapi
-from dotenv import find_dotenv, load_dotenv
 
-load_dotenv(find_dotenv())
+# from dotenv import find_dotenv, load_dotenv
+
+# load_dotenv(find_dotenv())
 
 
 log_fmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -108,11 +109,11 @@ def lambda_handler(event, context):
 
     # Upload top_headlines into bucket
     logger.info("Uploading top_headlines into bucket...")
-    everything_obj = bucket.Object(f"{folder_name}/top_headlines.json")
+    top_headlines_obj = bucket.Object(f"{folder_name}/top_headlines.json")
     f = BytesIO(json.dumps(top_headlines).encode("utf-8"))
-    everything_obj.upload_fileobj(f)
+    top_headlines_obj.upload_fileobj(f)
 
-    # Upload everythin into bucket
+    # Upload everything into bucket
     logger.info("Uploading everything into bucket...")
     everything_obj = bucket.Object(f"{folder_name}/everything.json")
     f = BytesIO(json.dumps(everything).encode("utf-8"))
