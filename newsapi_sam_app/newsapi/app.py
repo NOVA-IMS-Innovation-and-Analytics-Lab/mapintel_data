@@ -12,11 +12,6 @@ from io import BytesIO
 import boto3
 import newsapi
 
-# from dotenv import find_dotenv, load_dotenv
-
-# load_dotenv(find_dotenv())
-
-
 log_fmt = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=logging.INFO, format=log_fmt)
 
