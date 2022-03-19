@@ -8,9 +8,7 @@ The MapIntel project repository, containing its codebase and instructions on how
 
 ## Project Organization
 
-    ├── news_api
-    │   ├── lambda.py               <- Function used to retrieve news articles from NewsAPI
-    │   └── requirements.txt        <- The requirements file with lambda.py's dependencies
+    ├── newsapi_sam_app         <- AWS SAM App used to retrieve news articles from NewsAPI on a schedule
     │
     └── README.md
 
