@@ -1,4 +1,4 @@
-# MapIntel Research
+# MapIntel Data
 
 This is the Data collection repository of the MapIntel project. This repository contains all the data collection and pre-processing pipelines used to feed the MapIntel system.
 
